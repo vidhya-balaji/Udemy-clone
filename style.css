@@ -12,14 +12,11 @@ font-family: 'gabarito';
     top: 0px;
     padding: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     border-bottom: solid 1px;
     gap:20px;
 }
 .navbar__s1__title{
-    justify-content: start;
     color:#a435f0;
 
 }
@@ -48,6 +45,12 @@ font-family: 'gabarito';
     gap: 20px;
     padding: 10px;
     align-items: center;
+}
+.navbar__s4 img{
+width: 20px;
+}
+.navbar__s4{
+    display: none;
 }
 .categories{
     display: flex;
@@ -78,7 +81,7 @@ font-family: 'gabarito';
     background-color: white;
     top:200px;
     left:100px;
-    width: 500px;
+    width: 400px;
     height: 100px;
     position:absolute;
     padding: 20px;
@@ -110,7 +113,9 @@ font-family: 'gabarito';
     flex-wrap: wrap;
 }
 .course-card{
-    width: 250px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 .course-card img{
     width: 100%;
@@ -167,3 +172,32 @@ font-family: 'gabarito';
     align-items: baseline;
     justify-content: space-between;
 }
+/*Media Queries */
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .course-card{
+        flex-basis: 40%;
+    }
+    
+}
+@media screen and (max-width:800px){
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+        justify-content: end;
+    }
+    .sale-image__coursecard{
+        top: 100px;
+        width: 200px;
+        height: 50px;
+    }
+    
+}
+
+

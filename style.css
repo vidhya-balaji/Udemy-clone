@@ -7,6 +7,9 @@ body{
 font-family: 'gabarito';
 }
 .navbar{
+    background-color: white;
+    position:sticky;
+    top: 0px;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -57,10 +60,44 @@ font-family: 'gabarito';
     color: white;
     border-radius: 20px;
     padding: 10PX;
+    cursor: pointer;
+    border: solid blueviolet 1px;
+
+}
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    border: solid blueviolet 1px;
+    color:black;
 }
 .sale-image img{
     width: 100%;
-
+    position: relative;
+}
+.sale-image__coursecard{
+    background-color: white;
+    top:200px;
+    left:100px;
+    width: 500px;
+    height: 100px;
+    position:absolute;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
 }
 .recommended{
     padding: 10px;
